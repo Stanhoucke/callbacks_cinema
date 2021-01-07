@@ -16,12 +16,13 @@ Cinema.prototype.findByTitle = function (title) {
   return foundFilm;
 };
 
-Cinema.prototype.filterByGenre = function (genre) {
-  const filteredFilms = this.films.filter( (film) => {
-    return film.genre === genre;
-  });
-  return filteredFilms;
-};
+// Refactored out, use filmsByProperty instead.
+  // Cinema.prototype.filterByGenre = function (genre) {
+  //   const filteredFilms = this.films.filter( (film) => {
+  //     return film.genre === genre;
+  //   });
+  //   return filteredFilms;
+  // };
 
 Cinema.prototype.filmFromYear = function (year) {
   const inFilmList = this.films.some( (film) => {
