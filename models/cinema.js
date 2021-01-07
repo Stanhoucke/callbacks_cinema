@@ -37,4 +37,11 @@ Cinema.prototype.filmsAreLonger = function (length) {
   return longer;
 };
 
+Cinema.prototype.totalRunningTime = function () {
+  const total = this.films.reduce ( (runningTotal, film) => {
+    return runningTotal + film.length;
+  }, 0);
+  return total;
+};
+
 module.exports = Cinema;
