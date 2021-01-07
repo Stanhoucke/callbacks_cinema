@@ -30,4 +30,11 @@ Cinema.prototype.filmFromYear = function (year) {
   return inFilmList;
 };
 
+Cinema.prototype.filmsAreLonger = function (length) {
+  const longer = this.films.every ( (film) => {
+    return film.length > length;
+  });
+  return longer;
+};
+
 module.exports = Cinema;
